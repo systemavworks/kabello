@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <script>(function(){var t=localStorage.getItem('kabello-theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo de prótesis capilares Kabello. Tipos de bases, colores y texturas disponibles.">
+    <title>Catálogo | Kabello</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="assets/icons/favicon-32.png">
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+    <meta property="og:title" content="Catálogo | Kabello">
+    <meta property="og:description" content="Descubre nuestras bases Lace, Skin e Híbridas para prótesis capilar masculina.">
+    <meta property="og:image" content="https://kabello.es/assets/og-image.webp">
+    <meta property="og:url" content="https://kabello.es/catalogo.html">
+</head>
+<body>
+    <header class="header" id="mainHeader">
+        <div class="container header__container">
+            <a href="/" class="logo">
+                <img src="assets/icons/apple-touch-icon.png" alt="" class="logo__mark" width="36" height="36">
+                KABELLO<span class="logo__dot">.</span>
+            </a>
+            <nav class="nav" id="mainNav">
+                <ul class="nav__list">
+                    <li><a href="servicios.html" class="nav__link">Servicios</a></li>
+                    <li><a href="catalogo.html" class="nav__link">Catálogo</a></li>
+                    <li><a href="index.html#modelo" class="nav__link">Plan Mensual</a></li>
+                    <li><a href="contacto.html" class="nav__link btn btn--primary">Pedir Cita</a></li>
+                    <li>
+                        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Cambiar modo oscuro" aria-pressed="false">
+                            <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+                            <svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+            <button class="nav__toggle" id="navToggle" aria-label="Abrir menú">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h1 class="section__title">Catálogo de Prótesis</h1>
+                <p class="section__subtitle">Selecciona la base que mejor se adapte a tu estilo de vida</p>
+                <div class="grid grid--3">
+                    <article class="card">
+                        <div class="icon-badge">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 4v6h-6"/><path d="M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10"/><path d="M20.49 15a9 9 0 0 1-14.85 3.36L1 14"/></svg>
+                        </div>
+                        <h3>Lace (Malla)</h3>
+                        <p class="card__price">Desde 350€</p>
+                        <p>Base de malla ultrafina. Máxima transpiración, ideal para deportistas y climas cálidos.</p>
+                        <ul class="card__list">
+                            <li>Transpirable</li>
+                            <li>Ligera</li>
+                            <li>Durabilidad: 6-8 meses</li>
+                        </ul>
+                    </article>
+                    <article class="card">
+                        <div class="icon-badge">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2c4 5 7 9 7 13a7 7 0 0 1-14 0c0-4 3-8 7-13z"/></svg>
+                        </div>
+                        <h3>Skin (Ultrathin)</h3>
+                        <p class="card__price">Desde 400€</p>
+                        <p>Base de poliuretano ultrafino. Efecto piel real, contorno indetectable.</p>
+                        <ul class="card__list">
+                            <li>Efecto natural extremo</li>
+                            <li>Fácil limpieza</li>
+                            <li>Durabilidad: 4-6 meses</li>
+                        </ul>
+                    </article>
+                    <article class="card">
+                        <div class="icon-badge">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                        </div>
+                        <h3>Híbrida</h3>
+                        <p class="card__price">Desde 450€</p>
+                        <p>Combinación Lace + Skin. Lo mejor de ambas tecnologías en una sola prótesis.</p>
+                        <ul class="card__list">
+                            <li>Transpirable + Natural</li>
+                            <li>Máxima versatilidad</li>
+                            <li>Durabilidad: 8-10 meses</li>
+                        </ul>
+                    </article>
+                </div>
+                <div class="cta-section">
+                    <h2>¿Necesitas asesoramiento?</h2>
+                    <p>Te ayudamos a elegir la prótesis perfecta para ti</p>
+                    <a href="https://wa.me/34614837983?text=Hola,%20necesito%20asesoramiento%20sobre%20prótesis" class="btn btn--primary btn--large" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__bottom">
+            <p>&copy; 2026 Kabello. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>

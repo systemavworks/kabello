@@ -1,0 +1,3 @@
+Contact: mailto:info@kabello.es
+Preferred-Languages: es, en
+Canonical: https://kabello.es/.well-known/security.txt

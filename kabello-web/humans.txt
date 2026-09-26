@@ -1,0 +1,10 @@
+/* TEAM */
+Developer: Systema Vworks / AVStack
+Site: https://avstack.es
+Location: Andalucía, Spain
+
+/* SITE */
+Last update: 2026/09/26
+Standards: HTML5, CSS3, Vanilla JS
+Components: PWA, Service Worker
+Software: VS Code, Git
