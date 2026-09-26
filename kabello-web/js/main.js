@@ -20,6 +20,47 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('scroll', toggleHeaderShadow, { passive: true });
     }
 
+    // Barra de progreso de scroll
+    const progressBar = document.getElementById('progressBar');
+    if (progressBar) {
+        const updateProgress = () => {
+            const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+            progressBar.style.width = `${progress}%`;
+        };
+        updateProgress();
+        window.addEventListener('scroll', updateProgress, { passive: true });
+        window.addEventListener('resize', updateProgress);
+    }
+
+    // Animaciones al hacer scroll (fade-up) y contadores numéricos
+    const revealTargets = document.querySelectorAll('.reveal');
+    const counterTargets = document.querySelectorAll('[data-counter]');
+    if ('IntersectionObserver' in window && (revealTargets.length || counterTargets.length)) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('is-visible');
+                if (entry.target.hasAttribute('data-counter')) {
+                    const target = parseInt(entry.target.getAttribute('data-counter'), 10);
+                    const duration = 1000;
+                    const start = performance.now();
+                    const step = (now) => {
+                        const progress = Math.min((now - start) / duration, 1);
+                        entry.target.textContent = Math.round(progress * target);
+                        if (progress < 1) requestAnimationFrame(step);
+                    };
+                    requestAnimationFrame(step);
+                }
+                observer.unobserve(entry.target);
+            });
+        }, { threshold: 0.2 });
+        revealTargets.forEach(el => revealObserver.observe(el));
+        counterTargets.forEach(el => revealObserver.observe(el));
+    } else {
+        revealTargets.forEach(el => el.classList.add('is-visible'));
+    }
+
     // Menú Móvil
     const navToggle = document.getElementById('navToggle');
     const mainNav = document.getElementById('mainNav');

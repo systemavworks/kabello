@@ -18,8 +18,10 @@
     <link rel="manifest" href="manifest.json">
     <link rel="icon" type="image/png" href="assets/icons/favicon-32.png">
     <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+    <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
 </head>
 <body>
+    <div class="progress-bar" id="progressBar"></div>
     <header class="header" id="mainHeader">
         <div class="container header__container">
             <a href="/" class="logo">
@@ -62,7 +64,7 @@
             </div>
         </section>
 
-        <section id="servicios" class="section bg-light">
+        <section id="servicios" class="section bg-light reveal">
             <div class="container">
                 <h2 class="section__title">¿Por qué elegir Kabello?</h2>
                 <div class="grid grid--3">
@@ -91,7 +93,7 @@
             </div>
         </section>
 
-        <section id="modelo" class="section">
+        <section id="modelo" class="section reveal">
             <div class="container">
                 <h2 class="section__title">Un modelo pensado para ti</h2>
                 <div class="pricing-wrapper">
@@ -134,7 +136,7 @@
             </div>
         </section>
 
-        <section id="resultados" class="section bg-dark text-light">
+        <section id="resultados" class="section bg-dark text-light reveal">
             <div class="container">
                 <h2 class="section__title text-light">Resultados reales</h2>
                 <p class="section__subtitle text-light">Arrastra el control para ver la transformación.</p>
@@ -153,7 +155,7 @@
             </div>
         </section>
 
-        <section id="confianza" class="section bg-light">
+        <section id="confianza" class="section bg-light reveal">
             <div class="container">
                 <h2 class="section__title">Confianza que se nota</h2>
                 <p class="section__subtitle">Profesionalidad y cercanía en cada cita, con la satisfacción de nuestros clientes por delante.</p>
@@ -162,7 +164,7 @@
                         <div class="icon-badge">
                             <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
                         </div>
-                        <h3>+5 Años de Experiencia</h3>
+                        <h3>+<span data-counter="5">0</span> Años de Experiencia</h3>
                         <p>Más de un lustro dedicados en cuerpo y alma a la colocación y el mantenimiento de prótesis capilares con resultados naturales y duraderos.</p>
                     </article>
                     <article class="card">
@@ -184,7 +186,7 @@
         </section>
 
         <!-- Reseñas de ejemplo: sustituir por reseñas reales de clientes antes de publicar -->
-        <section id="resenas" class="section">
+        <section id="resenas" class="section reveal">
             <div class="container">
                 <h2 class="section__title">Lo que dicen nuestros clientes</h2>
                 <p class="section__subtitle">Opiniones de ejemplo — pendientes de sustituir por reseñas reales.</p>
@@ -244,7 +246,7 @@
             </div>
         </section>
 
-        <section id="faq" class="section bg-light">
+        <section id="faq" class="section bg-light reveal">
             <div class="container">
                 <h2 class="section__title">Preguntas Frecuentes</h2>
                 <p class="section__subtitle">Resolvemos las dudas más habituales sobre nuestras prótesis capilares.</p>
