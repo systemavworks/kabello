@@ -177,11 +177,21 @@ ul { list-style: none; }
 .faq-item p { margin-top: 1rem; opacity: 0.8; line-height: 1.7; }
 
 .footer { background: var(--color-bg-dark); color: var(--color-text-light); padding: 4rem 0 2rem; margin-top: 4rem; }
-.footer__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 3rem; }
+.footer__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 3rem; margin-bottom: 3rem; }
 .footer__logo { border-radius: var(--radius); margin-bottom: 1rem; }
-.footer__contact p { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; }
+.footer__links h4, .footer__contact h4 { font-size: 1rem; margin-bottom: 1.1rem; }
+.footer__links ul li { margin-bottom: 0.65rem; }
+.footer__contact p { display: flex; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.65rem; }
+.footer__contact p svg { flex-shrink: 0; margin-top: 0.15rem; }
 .footer__links a:hover, .footer__contact a:hover { color: var(--color-accent); }
-.footer__bottom { text-align: center; border-top: 1px solid #333; padding-top: 2rem; font-size: 0.9rem; opacity: 0.7; }
+.footer__bottom { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 1rem; text-align: center; border-top: 1px solid #333; padding-top: 2rem; font-size: 0.9rem; opacity: 0.7; }
+.footer__bottom p { margin: 0 auto 0 0; }
+.footer__top { display: inline-flex; align-items: center; gap: 0.4rem; color: inherit; opacity: 1; transition: color 0.2s ease; }
+.footer__top:hover { color: var(--color-accent); }
+@media (max-width: 640px) {
+    .footer__bottom { justify-content: center; }
+    .footer__bottom p { margin: 0; }
+}
 
 .whatsapp-float { position: fixed; bottom: 2rem; right: 2rem; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.3); z-index: 999; transition: transform 0.3s ease; }
 .whatsapp-float:hover { transform: scale(1.1); }
