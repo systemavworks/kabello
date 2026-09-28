@@ -107,9 +107,9 @@ ul { list-style: none; }
 .hero__actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
 .grid { display: grid; gap: 2rem; }
-.grid--2 { grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); }
-.grid--3 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
-.grid--4 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.grid--2 { grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr)); }
+.grid--3 { grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); }
+.grid--4 { grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); }
 
 .feature-split { display: grid; grid-template-columns: minmax(260px, 440px) 1fr; gap: 3rem; align-items: center; }
 .feature-split__media img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow); }
@@ -231,10 +231,38 @@ ul { list-style: none; }
 
 @media (max-width: 768px) {
     .nav__toggle { display: flex; }
-    .nav__list { position: fixed; top: 70px; left: 0; width: 100%; background: var(--nav-mobile-bg); flex-direction: column; padding: 2rem; gap: 1.5rem; transform: translateY(-150%); transition: transform 0.3s ease; box-shadow: var(--shadow); }
+    .nav__list { position: fixed; top: 76px; left: 0; width: 100%; background: var(--nav-mobile-bg); flex-direction: column; padding: 2rem; gap: 1.5rem; transform: translateY(-150%); transition: transform 0.3s ease; box-shadow: var(--shadow); }
     .nav__list.active { transform: translateY(0); }
     .hero__title { font-size: 2.5rem; }
     .hero::before, .hero::after { width: 260px; height: 260px; }
     .section__title { font-size: 2rem; }
     .section { padding: 3rem 0; }
+    .pricing-wrapper { gap: 1.5rem; }
+    .footer__bottom { text-align: center; }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .nav__list { gap: 1.25rem; }
+    .hero__title { font-size: 3.1rem; }
+    .container { padding: 0 1.25rem; }
+}
+
+@media (max-width: 480px) {
+    .container { padding: 0 1rem; }
+    .hero { padding: 7rem 0 4rem; }
+    .hero__title { font-size: 2rem; }
+    .hero__subtitle { font-size: 1.05rem; }
+    .hero__actions { flex-direction: column; align-items: stretch; }
+    .hero__actions .btn { width: 100%; }
+    .section { padding: 2.5rem 0; }
+    .section__title { font-size: 1.65rem; }
+    .card, .pricing-card, .contact-info, .contact-form { padding: 1.5rem; }
+    .cta-section, .cta-final { padding: 2rem 1.25rem; }
+    .cta-final h2 { font-size: 1.6rem; }
+    .cta-final .hero__actions .btn { width: 100%; }
+    .feature-item { flex-direction: column; text-align: center; align-items: center; }
+    .whatsapp-float { width: 50px; height: 50px; bottom: 1.25rem; right: 1.25rem; }
+    .whatsapp-float svg { width: 26px; height: 26px; }
+    .comparison-slider__handle { width: 32px; }
+    .comparison-slider__button { width: 32px; height: 32px; }
 }
