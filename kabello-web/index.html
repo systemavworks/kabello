@@ -139,10 +139,15 @@
                     </a>
                     <a href="#modelo" class="btn btn--outline btn--large">Ver cómo funciona</a>
                 </div>
+                <ul class="hero__trust">
+                    <li>+5 años de experiencia</li>
+                    <li>Sin permanencia</li>
+                    <li>Colocación a domicilio</li>
+                </ul>
             </div>
         </section>
 
-        <section id="servicios" class="section bg-light reveal">
+        <section id="servicios" class="section bg-light section--diagonal reveal">
             <div class="container">
                 <h2 class="section__title">¿Por qué elegir Kabello?</h2>
                 <div class="feature-split">
@@ -227,6 +232,8 @@
             </div>
         </section>
 
+        <!-- Sección "Resultados reales" deshabilitada temporalmente: pendiente de fotos reales antes/después -->
+        <!--
         <section id="resultados" class="section bg-dark text-light reveal">
             <div class="container">
                 <h2 class="section__title text-light">Resultados reales</h2>
@@ -245,6 +252,7 @@
                 </div>
             </div>
         </section>
+        -->
 
         <section id="estilo-de-vida" class="section reveal">
             <div class="container">
@@ -283,7 +291,7 @@
             </div>
         </section>
 
-        <section id="confianza" class="section bg-light reveal">
+        <section id="confianza" class="section bg-light section--diagonal reveal">
             <div class="container">
                 <h2 class="section__title">Confianza que se nota</h2>
                 <p class="section__subtitle">Profesionalidad y cercanía en cada cita, con la satisfacción de nuestros clientes por delante.</p>
@@ -318,8 +326,9 @@
             <div class="container">
                 <h2 class="section__title">Lo que dicen nuestros clientes</h2>
                 <p class="section__subtitle">Opiniones de ejemplo — pendientes de sustituir por reseñas reales.</p>
-                <div class="grid grid--3">
-                    <article class="card review-card">
+                <div class="testimonial-carousel" id="testimonialCarousel">
+                    <div class="testimonial-track">
+                    <article class="card review-card testimonial-slide">
                         <div class="review-card__stars" aria-label="5 de 5 estrellas">
                             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01z"/></svg>
                             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01z"/></svg>
@@ -336,7 +345,7 @@
                             </div>
                         </div>
                     </article>
-                    <article class="card review-card">
+                    <article class="card review-card testimonial-slide">
                         <div class="review-card__stars" aria-label="5 de 5 estrellas">
                             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01z"/></svg>
                             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01z"/></svg>
@@ -353,7 +362,7 @@
                             </div>
                         </div>
                     </article>
-                    <article class="card review-card">
+                    <article class="card review-card testimonial-slide">
                         <div class="review-card__stars" aria-label="5 de 5 estrellas">
                             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01z"/></svg>
                             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01z"/></svg>
@@ -370,11 +379,13 @@
                             </div>
                         </div>
                     </article>
+                    </div>
+                    <div class="testimonial-dots" id="testimonialDots"></div>
                 </div>
             </div>
         </section>
 
-        <section id="faq" class="section bg-light reveal">
+        <section id="faq" class="section bg-light section--diagonal reveal">
             <div class="container">
                 <h2 class="section__title">Preguntas Frecuentes</h2>
                 <p class="section__subtitle">Resolvemos las dudas más habituales sobre nuestras prótesis capilares.</p>

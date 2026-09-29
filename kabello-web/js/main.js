@@ -106,4 +106,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
         slider.addEventListener('click', (e) => updateSlider(e.clientX));
     }
+
+    // Carrusel de testimonios
+    const carousel = document.getElementById('testimonialCarousel');
+    if (carousel) {
+        const track = carousel.querySelector('.testimonial-track');
+        const slides = Array.from(track.children);
+        const dotsWrap = document.getElementById('testimonialDots');
+        let index = 0;
+        let timer;
+
+        slides.forEach((_, i) => {
+            const dot = document.createElement('button');
+            dot.className = 'testimonial-dot' + (i === 0 ? ' active' : '');
+            dot.setAttribute('aria-label', `Ver testimonio ${i + 1}`);
+            dot.addEventListener('click', () => goTo(i));
+            dotsWrap.appendChild(dot);
+        });
+        const dots = Array.from(dotsWrap.children);
+
+        const goTo = (i) => {
+            index = (i + slides.length) % slides.length;
+            track.style.transform = `translateX(-${index * 100}%)`;
+            dots.forEach((d, di) => d.classList.toggle('active', di === index));
+        };
+
+        const start = () => {
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+            timer = setInterval(() => goTo(index + 1), 6000);
+        };
+        const stop = () => clearInterval(timer);
+
+        carousel.addEventListener('mouseenter', stop);
+        carousel.addEventListener('mouseleave', start);
+        carousel.addEventListener('focusin', stop);
+        carousel.addEventListener('focusout', start);
+
+        start();
+    }
 });
