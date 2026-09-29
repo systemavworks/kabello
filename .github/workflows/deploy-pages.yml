@@ -38,3 +38,19 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Notify IndexNow (Bing, Yahoo, DuckDuckGo vía Bing, Yandex)
+        run: |
+          curl -s -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d '{
+              "host": "kabello.es",
+              "key": "2eaa1705f2cf434998d775f66643f6dc",
+              "keyLocation": "https://kabello.es/2eaa1705f2cf434998d775f66643f6dc.txt",
+              "urlList": [
+                "https://kabello.es/",
+                "https://kabello.es/servicios.html",
+                "https://kabello.es/catalogo.html",
+                "https://kabello.es/contacto.html"
+              ]
+            }'
