@@ -137,6 +137,10 @@ ul { list-style: none; }
 .card:hover { transform: translateY(-6px); box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.15); }
 .card--large { text-align: left; }
 .card__photo { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: var(--radius); margin-bottom: 1.25rem; }
+.tone-swatches { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.75rem; margin: 2rem 0; }
+.tone-swatch { display: flex; flex-direction: column; align-items: center; gap: 0.6rem; }
+.tone-swatch__color { width: 56px; height: 56px; border-radius: 50%; box-shadow: var(--shadow); border: 3px solid var(--color-card-bg); }
+.tone-swatch__label { font-size: 0.85rem; font-weight: 600; text-align: center; }
 .icon-badge { width: 56px; height: 56px; border-radius: 50%; background: rgba(176, 141, 43, 0.12); color: var(--color-accent); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem; flex-shrink: 0; }
 .icon-badge svg { width: 28px; height: 28px; }
 .card--large .icon-badge { margin: 0 0 1.25rem; }
