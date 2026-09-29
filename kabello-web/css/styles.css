@@ -138,8 +138,8 @@ ul { list-style: none; }
 .card--large { text-align: left; }
 .card__photo { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: var(--radius); margin-bottom: 1.25rem; }
 .tone-swatches { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.75rem; margin: 2rem 0; }
-.tone-swatch { display: flex; flex-direction: column; align-items: center; gap: 0.6rem; }
-.tone-swatch__photo { width: 100px; height: 86px; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow); }
+.tone-swatch { display: flex; flex-direction: column; align-items: center; gap: 0.6rem; width: 130px; }
+.tone-swatch__photo { width: 130px; aspect-ratio: 720 / 602; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow); }
 .tone-swatch__label { font-size: 0.85rem; font-weight: 600; text-align: center; }
 .icon-badge { width: 56px; height: 56px; border-radius: 50%; background: rgba(176, 141, 43, 0.12); color: var(--color-accent); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem; flex-shrink: 0; }
 .icon-badge svg { width: 28px; height: 28px; }
