@@ -81,30 +81,53 @@ document.addEventListener('DOMContentLoaded', () => {
         const beforeImage = slider.querySelector('.comparison-slider__image--before');
         const handle = document.getElementById('sliderHandle');
         let isDragging = false;
+        let autoTimer;
+        let autoPosition = 15;
+        let autoDirection = 1;
 
-        const updateSlider = (x) => {
-            const rect = slider.getBoundingClientRect();
-            let position = ((x - rect.left) / rect.width) * 100;
+        const setPosition = (position) => {
             position = Math.max(0, Math.min(100, position));
             beforeImage.style.width = `${position}%`;
             handle.style.left = `${position}%`;
         };
 
-        slider.addEventListener('mousedown', () => isDragging = true);
+        const updateSlider = (x) => {
+            const rect = slider.getBoundingClientRect();
+            setPosition(((x - rect.left) / rect.width) * 100);
+        };
+
+        const stopAutoPlay = () => clearInterval(autoTimer);
+        const startAutoPlay = () => {
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+            stopAutoPlay();
+            autoTimer = setInterval(() => {
+                autoPosition += autoDirection;
+                if (autoPosition >= 85) autoDirection = -1;
+                if (autoPosition <= 15) autoDirection = 1;
+                setPosition(autoPosition);
+            }, 40);
+        };
+
+        slider.addEventListener('mousedown', () => { isDragging = true; stopAutoPlay(); });
         window.addEventListener('mouseup', () => isDragging = false);
         slider.addEventListener('mousemove', (e) => {
             if (!isDragging) return;
             updateSlider(e.clientX);
         });
+        slider.addEventListener('mouseenter', stopAutoPlay);
+        slider.addEventListener('mouseleave', () => { if (!isDragging) startAutoPlay(); });
 
-        slider.addEventListener('touchstart', () => isDragging = true);
+        slider.addEventListener('touchstart', () => { isDragging = true; stopAutoPlay(); }, { passive: true });
         window.addEventListener('touchend', () => isDragging = false);
         slider.addEventListener('touchmove', (e) => {
             if (!isDragging) return;
             updateSlider(e.touches[0].clientX);
         });
 
-        slider.addEventListener('click', (e) => updateSlider(e.clientX));
+        slider.addEventListener('click', (e) => { stopAutoPlay(); updateSlider(e.clientX); });
+
+        setPosition(autoPosition);
+        startAutoPlay();
     }
 
     // Carrusel de testimonios
