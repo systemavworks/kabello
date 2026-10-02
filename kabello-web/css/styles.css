@@ -133,6 +133,10 @@ ul { list-style: none; }
     .feature-split { grid-template-columns: 1fr; }
     .feature-split__media img { max-width: 340px; margin: 0 auto; }
 }
+.studio-photo { max-width: 900px; margin: 0 auto 3rem; }
+.studio-photo img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow); }
+.studio-photo__caption { text-align: center; margin-top: 0.85rem; opacity: 0.75; font-size: 0.95rem; }
+
 .card { background: var(--color-card-bg); padding: 2rem; border-radius: var(--radius); box-shadow: var(--shadow); text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; }
 .card:hover { transform: translateY(-6px); box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.15); }
 .card--large { text-align: left; }
